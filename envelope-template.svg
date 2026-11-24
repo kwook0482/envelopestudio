@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="225mm" height="170mm" viewBox="0 0 225 170">
+  <title>고정 봉투 전개도 225 × 170mm</title>
+  <desc>앞면 185 × 75mm, 상단 덮개 185 × 30mm, 좌우 접착 날개 각 20mm, 하단 날개 높이 65mm</desc>
+  <rect width="225" height="170" fill="#fff"/>
+  <path d="M20 0H205V30H225V105H205L196 170H29L20 105H0V30H20Z" fill="none" stroke="#89939f" stroke-width=".28"/>
+  <path d="M20 30H205M20 105H205M20 30V105M205 30V105" fill="none" stroke="#9da8b5" stroke-width=".24" stroke-dasharray="1.5 1.2"/>
+</svg>

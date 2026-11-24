@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>봉투 디자인 제작소</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="brand"><span class="brand-mark">봉</span><div><strong>봉투 디자인 제작소</strong><small>ENVELOPE DESIGN STUDIO</small></div></div>
+  <div class="header-note">나만의 봉투를 쉽고 정교하게</div>
+</header>
+<main class="wrap">
+  <nav class="steps" aria-label="제작 단계">
+    <div class="step active" data-step="1"><b>01</b><span>프롬프트 생성</span></div><i></i>
+    <div class="step" data-step="2"><b>02</b><span>이미지 업로드·합성</span></div><i></i>
+    <div class="step" data-step="3"><b>03</b><span>최종 출력</span></div>
+  </nav>
+
+  <section id="screen1" class="screen active">
+    <div class="intro"><span class="eyebrow">STEP 01 · DESIGN BRIEF</span><h1>어떤 봉투를 만들까요?</h1><p>원하는 조건만 입력하세요. 비워 둔 항목은 AI가 전체 디자인에 맞춰 추천합니다.</p></div>
+    <div class="two-col">
+      <div class="panel">
+        <h2>디자인 상담</h2>
+        <div class="field"><label for="purpose">1. 봉투 용도</label><select id="purpose"><option value="">선택해 주세요</option><option>축의금</option><option>세뱃돈</option><option>생일</option><option>감사</option><option>기타</option></select><input id="purposeEtc" placeholder="기타 용도 직접 입력"></div>
+        <div class="field"><label for="mood">2. 디자인 분위기</label><select id="mood"><option value="">AI 추천</option><option>전통적</option><option>현대적</option><option>고급스러운</option><option>미니멀</option><option>따뜻한</option></select><input id="moodEtc" placeholder="원하는 분위기 직접 입력"></div>
+        <div class="field"><label>3. 앞면 색상</label><div class="color-palette" data-target="color">
+          <button type="button" class="swatch-choice selected" data-value="AI 추천" aria-pressed="true"><i style="background:linear-gradient(135deg,#e9e4d8 0 33%,#c94a45 33% 66%,#527da8 66%)"></i><span>AI 추천</span></button>
+          <button type="button" class="swatch-choice" data-value="빨강" aria-pressed="false"><i style="background:#c94a45"></i><span>빨강</span></button>
+          <button type="button" class="swatch-choice" data-value="주황" aria-pressed="false"><i style="background:#e99a35"></i><span>주황</span></button>
+          <button type="button" class="swatch-choice" data-value="노랑" aria-pressed="false"><i style="background:#e9d36a"></i><span>노랑</span></button>
+          <button type="button" class="swatch-choice" data-value="초록" aria-pressed="false"><i style="background:#64866a"></i><span>초록</span></button>
+          <button type="button" class="swatch-choice" data-value="파랑" aria-pressed="false"><i style="background:#527da8"></i><span>파랑</span></button>
+          <button type="button" class="swatch-choice" data-value="남색" aria-pressed="false"><i style="background:#303f67"></i><span>남색</span></button>
+          <button type="button" class="swatch-choice" data-value="보라" aria-pressed="false"><i style="background:#88709d"></i><span>보라</span></button>
+          <button type="button" class="swatch-choice" data-value="아이보리" aria-pressed="false"><i style="background:#f1e9d8"></i><span>아이보리</span></button>
+          <button type="button" class="swatch-choice" data-value="검정" aria-pressed="false"><i style="background:#333333"></i><span>검정</span></button>
+          <button type="button" class="swatch-choice" data-value="금색" aria-pressed="false"><i style="background:#c5a34a"></i><span>금색</span></button>
+          <button type="button" class="swatch-choice" data-value="은색" aria-pressed="false"><i style="background:#b9c0c8"></i><span>은색</span></button>
+        </div><select id="color" class="visually-hidden"><option selected>AI 추천</option><option>빨강</option><option>주황</option><option>노랑</option><option>초록</option><option>파랑</option><option>남색</option><option>보라</option><option>아이보리</option><option>검정</option><option>금색</option><option>은색</option></select><input id="colorEtc" placeholder="직접 원하는 색상 입력 (선택)"></div>
+        <div class="field"><label for="decor">4. 그림 및 장식</label><select id="decor"><option>AI 추천</option><option>전통 문양</option><option>꽃과 식물</option><option>자연 풍경</option><option>추상 패턴</option><option>글자 중심</option></select><input id="decorEtc" placeholder="원하는 그림이나 장식 직접 입력"></div>
+        <div class="field"><label for="wanted">5. 앞면에 넣고 싶은 이미지나 장면</label><textarea id="wanted" rows="2" placeholder="예: 한복을 입은 어린이, 매화가 핀 한옥 정원&#10;입력하지 않으면 AI가 추천합니다."></textarea></div>
+        <div class="field"><label for="extra">6. 추가 요청</label><textarea id="extra" rows="2" placeholder="문구, 특별한 장식, 종이 질감 등"></textarea></div>
+        <div class="field"><label>7. 상단 덮개 바탕색</label><div class="color-palette" data-target="flapColor">
+          <button type="button" class="swatch-choice selected" data-value="AI 추천" aria-pressed="true"><i style="background:linear-gradient(135deg,#e9e4d8 0 33%,#c94a45 33% 66%,#527da8 66%)"></i><span>AI 추천</span></button>
+          <button type="button" class="swatch-choice" data-value="빨강" aria-pressed="false"><i style="background:#c94a45"></i><span>빨강</span></button>
+          <button type="button" class="swatch-choice" data-value="주황" aria-pressed="false"><i style="background:#e99a35"></i><span>주황</span></button>
+          <button type="button" class="swatch-choice" data-value="노랑" aria-pressed="false"><i style="background:#e9d36a"></i><span>노랑</span></button>
+          <button type="button" class="swatch-choice" data-value="초록" aria-pressed="false"><i style="background:#64866a"></i><span>초록</span></button>
+          <button type="button" class="swatch-choice" data-value="파랑" aria-pressed="false"><i style="background:#527da8"></i><span>파랑</span></button>
+          <button type="button" class="swatch-choice" data-value="남색" aria-pressed="false"><i style="background:#303f67"></i><span>남색</span></button>
+          <button type="button" class="swatch-choice" data-value="보라" aria-pressed="false"><i style="background:#88709d"></i><span>보라</span></button>
+          <button type="button" class="swatch-choice" data-value="아이보리" aria-pressed="false"><i style="background:#f1e9d8"></i><span>아이보리</span></button>
+          <button type="button" class="swatch-choice" data-value="검정" aria-pressed="false"><i style="background:#333333"></i><span>검정</span></button>
+          <button type="button" class="swatch-choice" data-value="금색" aria-pressed="false"><i style="background:#c5a34a"></i><span>금색</span></button>
+          <button type="button" class="swatch-choice" data-value="은색" aria-pressed="false"><i style="background:#b9c0c8"></i><span>은색</span></button>
+        </div><select id="flapColor" class="visually-hidden"><option selected>AI 추천</option><option>빨강</option><option>주황</option><option>노랑</option><option>초록</option><option>파랑</option><option>남색</option><option>보라</option><option>아이보리</option><option>검정</option><option>금색</option><option>은색</option></select><input id="flapColorEtc" placeholder="직접 원하는 바탕색 입력 (선택)"></div>
+        <button class="primary full" id="makePrompt">프롬프트 생성하기 <span>→</span></button>
+      </div>
+      <div class="panel result-panel">
+        <div class="result-head"><div><span class="eyebrow">AI IMAGE PROMPTS</span><h2>생성된 프롬프트</h2></div><span class="pill" id="promptState">생성 전</span></div>
+        <div class="prompt-card"><div class="prompt-title"><strong>① 앞면 디자인</strong><span>185 × 75mm · 2.47:1</span></div><pre id="frontPrompt" class="prompt-output placeholder">왼쪽에서 디자인 조건을 입력한 뒤
+‘프롬프트 생성하기’를 눌러주세요.</pre><button class="outline copy-btn" data-copy="frontPrompt">앞면 프롬프트 복사</button></div>
+        <div class="prompt-card"><div class="prompt-title"><strong>② 상단 덮개 디자인</strong><span>최종 185 × 30mm · 생성 권장 191 × 36mm</span></div><pre id="flapPrompt" class="prompt-output placeholder">상단 덮개 디자인 프롬프트가
+이곳에 표시됩니다.</pre><button class="outline copy-btn" data-copy="flapPrompt">덮개 프롬프트 복사</button></div>
+        <button class="primary full" id="copyAll" disabled>전체 프롬프트 복사</button>
+        <div class="notice"><b>다음 작업</b><p>각 프롬프트를 외부 AI에 붙여넣어 이미지를 생성하고 저장하세요. 앞면과 상단 덮개 이미지를 각각 만든 뒤 2단계에서 업로드합니다.</p></div>
+        <button class="secondary full" id="to2from1" disabled>이미지 업로드 단계로 이동 →</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="screen2" class="screen">
+    <div class="intro"><span class="eyebrow">STEP 02 · IMAGE & COMPOSITION</span><h1>디자인 이미지를 봉투에 배치하세요</h1><p>앞면과 상단 덮개 이미지를 각각 업로드하세요. 배치 결과는 오른쪽 도안에서 확인할 수 있습니다.</p></div>
+    <div class="upload-layout">
+      <div class="panel">
+        <h2>이미지 등록 및 배치 조절</h2>
+        <div class="upload-block">
+          <div class="upload-title"><strong>① 앞면 디자인 이미지</strong><span>185 × 75mm</span></div>
+          <input type="file" id="frontFile" accept="image/*">
+          <div class="thumb-wrap"><img id="frontThumb" alt="앞면 이미지 미리보기"><span id="frontEmpty">이미지를 선택하세요</span></div>
+          <div class="controls">
+            <label>맞춤 방식<select id="frontFit"><option value="contain" selected>이미지 전체 표시</option><option value="cover">영역 채우기</option></select></label>
+            <label>확대·축소 <output id="frontZoomVal">100%</output><input id="frontZoom" type="range" min="50" max="200" value="100"></label>
+            <label>좌우 위치 <output id="frontXVal">0</output><input id="frontX" type="range" min="-100" max="100" value="0"></label>
+            <label>상하 위치 <output id="frontYVal">0</output><input id="frontY" type="range" min="-100" max="100" value="0"></label>
+          </div>
+          <button class="text-btn" id="resetFront">앞면 배치 초기화</button>
+        </div>
+        <div class="upload-block">
+          <div class="upload-title"><strong>② 상단 덮개 디자인 이미지</strong><span>생성 권장 191 × 36mm · 최종 185 × 30mm · 180° 회전</span></div>
+          <input type="file" id="flapFile" accept="image/*">
+          <div class="thumb-wrap"><img id="flapThumb" alt="덮개 이미지 미리보기"><span id="flapEmpty">이미지를 선택하세요</span></div>
+          <div class="controls">
+            <label>맞춤 방식<select id="flapFit"><option value="contain">이미지 전체 표시</option><option value="cover" selected>영역 채우기</option></select></label>
+            <label>확대·축소 <output id="flapZoomVal">100%</output><input id="flapZoom" type="range" min="50" max="200" value="100"></label>
+            <label>좌우 위치 <output id="flapXVal">0</output><input id="flapX" type="range" min="-100" max="100" value="0"></label>
+            <label>상하 위치 <output id="flapYVal">0</output><input id="flapY" type="range" min="-100" max="100" value="0"></label>
+          </div>
+          <button class="text-btn" id="resetFlap">덮개 배치 초기화</button>
+          <p class="hint">덮개 이미지는 191 × 36mm로 생성하는 것을 권장합니다. 웹사이트가 중앙의 185 × 30mm 영역만 표시하며, 바깥 여유 영역은 자동으로 잘립니다. 접었을 때 올바른 방향이 되도록 180도 회전합니다.</p>
+        </div>
+        <div class="button-row"><button class="secondary" id="back1">← 이전</button><button class="primary" id="compose">봉투 합성하기</button></div>
+      </div>
+      <div class="panel preview-panel">
+        <div class="result-head"><div><span class="eyebrow">SVG ENVELOPE</span><h2>봉투 합성 미리보기</h2></div><span class="pill" id="composeState">이미지 대기</span></div>
+        <div class="envelope-stage"><div id="envelopePreview"></div></div>
+        <div class="legend"><span><i class="cut"></i> 재단선</span><span><i class="fold"></i> 접는 선</span></div>
+        <p class="hint">도안 전체 225 × 170mm · 중앙 몸체 185 × 75mm. 좌우 접착 날개와 하단 날개에는 디자인을 적용하지 않습니다.</p>
+        <button class="primary full" id="to3" disabled>최종 출력 화면으로 이동 →</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="screen3" class="screen">
+    <div class="intro"><span class="eyebrow">STEP 03 · FINAL OUTPUT</span><h1>봉투 디자인이 완성되었습니다</h1><p>업로드한 원본 봉투 도안을 기준으로 배치했습니다. 출력 전 도안과 배율을 확인하고 100% 배율을 사용하세요.</p></div>
+    <div class="print-layout">
+      <div class="panel">
+        <div class="result-head"><h2>최종 봉투 도안</h2><span class="pill">A4 가로</span></div>
+        <div class="paper-stage"><div id="finalPreview"></div></div>
+        <div class="legend"><span><i class="cut"></i> 재단선</span><span><i class="fold"></i> 접는 선</span></div>
+      </div>
+      <aside class="panel print-options">
+        <h2>출력 설정</h2>
+        <div class="spec"><span>용지</span><b>A4 가로 · 297 × 210mm</b></div>
+        <div class="spec"><span>봉투 도안</span><b>225 × 170mm</b></div>
+        <div class="spec"><span>출력 배율</span><b>100% · 실제 크기</b></div>
+        <div class="notice"><b>인쇄 안내</b><p>인쇄 창에서 용지 A4, 방향 가로, 배율 100% 또는 실제 크기를 선택하세요. ‘페이지에 맞춤’은 선택하지 마세요.</p></div>
+        <button class="primary full" id="downloadPdf">PDF 다운로드 / 저장</button>
+        <button class="outline full" id="printNow">인쇄하기</button>
+        <button class="text-btn full" id="back2">← 이미지 배치 수정</button>
+        <button class="text-btn full" id="restart">새 봉투 만들기</button>
+      </aside>
+    </div>
+  </section>
+</main>
+<footer>봉투 디자인 제작소 <span>· 브라우저에서 작업하며 이미지가 서버로 전송되지 않습니다.</span></footer>
+<script src="app.js"></script>
+</body>
+</html>
